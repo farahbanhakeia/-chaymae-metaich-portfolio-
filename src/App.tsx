@@ -2,6 +2,7 @@ import { BackToTop } from './components/BackToTop';
 import { Footer } from './components/Footer';
 import { LazyFinance } from './components/LazyFinance';
 import { Navbar } from './components/Navbar';
+import { ScrollProgress } from './components/ScrollProgress';
 import { About } from './sections/About';
 import { Contact } from './sections/Contact';
 import { Education } from './sections/Education';
@@ -21,6 +22,7 @@ export default function App() {
         Aller au contenu
       </a>
 
+      <ScrollProgress />
       <Navbar />
 
       <main>

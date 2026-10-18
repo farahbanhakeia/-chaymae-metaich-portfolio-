@@ -64,10 +64,14 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-3"
             >
               <a href="#projets" className="btn-primary">
-                Explorer mes projets
+                Voir mes projets
                 <Icon name="ArrowRight" size={17} />
               </a>
-              <a href={profile.cvPath} download className="btn-secondary">
+              <a href="#contact" className="btn-secondary">
+                <Icon name="Mail" size={17} />
+                Me contacter
+              </a>
+              <a href={profile.cvPath} download className="btn-ghost">
                 <Icon name="Download" size={17} />
                 Télécharger mon CV
               </a>

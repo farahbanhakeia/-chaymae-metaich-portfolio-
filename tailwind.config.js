@@ -47,6 +47,15 @@ export default {
           500: '#06B6D4',
           600: '#0891B2',
         },
+        gold: {
+          100: '#F6EDD4',
+          200: '#ECDCA9',
+          300: '#DCC17D',
+          400: '#CDAA5A',
+          500: '#C0954A',
+          600: '#A2793A',
+          700: '#7E5E2E',
+        },
         cream: '#F7F9F8',
       },
       fontFamily: {

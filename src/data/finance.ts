@@ -159,3 +159,116 @@ export const heroBars: { label: string; v: number }[] = [
   { label: 'T3', v: 61 },
   { label: 'T4', v: 83 },
 ];
+
+/* ------------------------------------------------------------------ */
+/*  Tableau de bord étendu — tous ILLUSTRATIFS (démonstration)        */
+/* ------------------------------------------------------------------ */
+
+export interface KpiTile {
+  label: string;
+  num: number;
+  prefix?: string;
+  suffix: string;
+  decimals?: number;
+  delta: string;
+  positive: boolean;
+  spark: number[];
+  tone: 'emerald' | 'cyan' | 'gold' | 'navy';
+}
+
+/** Indicateurs clés de pilotage (illustratifs — compteurs animés). */
+export const kpiTiles: KpiTile[] = [
+  {
+    label: 'Taux de recouvrement',
+    num: 96,
+    suffix: ' %',
+    delta: '+3 pts',
+    positive: true,
+    spark: [88, 90, 89, 92, 93, 95, 96],
+    tone: 'emerald',
+  },
+  {
+    label: 'DSO — délai de paiement',
+    num: 33,
+    suffix: ' j',
+    delta: '−9 j',
+    positive: true,
+    spark: [48, 46, 44, 41, 38, 35, 33],
+    tone: 'cyan',
+  },
+  {
+    label: "Taux d'impayés",
+    num: 6.8,
+    decimals: 1,
+    suffix: ' %',
+    delta: '−4 pts',
+    positive: true,
+    spark: [14, 13, 12, 10, 9, 8, 7],
+    tone: 'gold',
+  },
+  {
+    label: 'Trésorerie nette',
+    num: 108,
+    prefix: '+',
+    suffix: ' k€',
+    delta: '+18 %',
+    positive: true,
+    spark: [78, 82, 80, 90, 97, 103, 108],
+    tone: 'navy',
+  },
+];
+
+export interface IndexPoint {
+  t: string;
+  value: number;
+}
+
+/** Courbe de type « indice » / série de marché (illustrative). */
+export const marketIndexData: IndexPoint[] = [
+  { t: 'S1', value: 100 },
+  { t: 'S2', value: 103 },
+  { t: 'S3', value: 101 },
+  { t: 'S4', value: 106 },
+  { t: 'S5', value: 109 },
+  { t: 'S6', value: 107 },
+  { t: 'S7', value: 112 },
+  { t: 'S8', value: 116 },
+  { t: 'S9', value: 114 },
+  { t: 'S10', value: 119 },
+  { t: 'S11', value: 123 },
+  { t: 'S12', value: 121 },
+  { t: 'S13', value: 127 },
+  { t: 'S14', value: 131 },
+  { t: 'S15', value: 129 },
+  { t: 'S16', value: 134 },
+];
+
+export interface ProfitabilityPoint {
+  year: string;
+  ca: number;
+  marge: number;
+}
+
+/** Analyse de rentabilité : chiffre d'affaires vs marge (%) — illustrative. */
+export const profitabilityData: ProfitabilityPoint[] = [
+  { year: '2020', ca: 62, marge: 9 },
+  { year: '2021', ca: 71, marge: 11 },
+  { year: '2022', ca: 78, marge: 12 },
+  { year: '2023', ca: 90, marge: 14 },
+  { year: '2024', ca: 103, marge: 16 },
+];
+
+export interface EcoPoint {
+  year: string;
+  croissance: number;
+  inflation: number;
+}
+
+/** Indicateurs économiques (illustratifs) — exploration data meets economics. */
+export const economicIndicatorsData: EcoPoint[] = [
+  { year: '2020', croissance: -6.3, inflation: 0.7 },
+  { year: '2021', croissance: 8.0, inflation: 1.4 },
+  { year: '2022', croissance: 1.3, inflation: 6.6 },
+  { year: '2023', croissance: 3.4, inflation: 6.1 },
+  { year: '2024', croissance: 3.2, inflation: 2.2 },
+];

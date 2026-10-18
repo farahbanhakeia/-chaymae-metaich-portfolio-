@@ -4,7 +4,12 @@ import { AutomationChart } from '@/components/charts/AutomationChart';
 import { CashFlowChart } from '@/components/charts/CashFlowChart';
 import { ChartCard } from '@/components/charts/ChartCard';
 import { DsoChart } from '@/components/charts/DsoChart';
+import { EconomicIndicatorsChart } from '@/components/charts/EconomicIndicatorsChart';
+import { MarketChart } from '@/components/charts/MarketChart';
+import { ProfitabilityChart } from '@/components/charts/ProfitabilityChart';
 import { Icon } from '@/components/Icon';
+import { IllustrativeBadge } from '@/components/IllustrativeBadge';
+import { KpiBand } from '@/components/KpiBand';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeading } from '@/components/SectionHeading';
 
@@ -19,18 +24,18 @@ export function FinanceEconomics() {
               Data <span className="text-gradient">×</span> Finance &amp; Économie
             </>
           }
-          description="Là où mes compétences analytiques rencontrent la finance, les statistiques et l'économie. Voici les domaines que je sais aborder — et des visualisations de démonstration qui illustrent le type d'analyses que je construis."
+          description="Là où mes compétences analytiques rencontrent la finance, les statistiques et l'économie. Un tableau de bord de démonstration qui illustre le type d'analyses et de visualisations que je construis."
         />
 
         {/* Honesty banner */}
         <Reveal className="mt-8">
-          <div className="flex items-start gap-3 rounded-xl border border-amber-400/30 bg-amber-400/5 p-4 text-sm text-amber-800 dark:text-amber-200">
-            <Icon name="CircleDot" size={18} className="mt-0.5 shrink-0 text-amber-500" />
+          <div className="flex items-start gap-3 rounded-xl border border-gold-300/40 bg-gold-100/40 p-4 text-sm text-gold-700 dark:border-gold-400/25 dark:bg-gold-400/5 dark:text-gold-200">
+            <Icon name="CircleDot" size={18} className="mt-0.5 shrink-0 text-gold-500" />
             <p>
-              <span className="font-semibold">Note d'honnêteté —</span> les graphiques ci-dessous
-              utilisent des <strong>données illustratives</strong> (démonstration de mise en forme).
-              Ils ne représentent aucun chiffre réel d'entreprise et servent uniquement à montrer le
-              type d'analyses réalisables, en lien avec mes missions.
+              <span className="font-semibold">Note d'honnêteté —</span> tous les indicateurs et
+              graphiques de cette section utilisent des <strong>données illustratives</strong>{' '}
+              (démonstration de mise en forme). Ils ne représentent aucun chiffre réel d'entreprise
+              et servent uniquement à montrer le type d'analyses réalisables.
             </p>
           </div>
         </Reveal>
@@ -61,11 +66,31 @@ export function FinanceEconomics() {
           </div>
         </div>
 
-        {/* Visualisations */}
+        {/* Dashboard */}
         <div className="mt-14">
-          <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
-            Visualisations · démonstration
-          </h3>
+          <div className="flex flex-wrap items-center gap-3">
+            <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+              Tableau de bord · indicateurs clés
+            </h3>
+            <IllustrativeBadge />
+          </div>
+
+          <div className="mt-5">
+            <KpiBand />
+          </div>
+
+          {/* Featured market index */}
+          <Reveal className="mt-5">
+            <ChartCard
+              title="Indice de marché"
+              subtitle="Série temporelle — démonstration"
+              icon="TrendingUp"
+              footnote="Illustratif — exploration de l'analyse de séries temporelles et de données de marché."
+            >
+              <MarketChart />
+            </ChartCard>
+          </Reveal>
+
           <div className="mt-5 grid gap-5 lg:grid-cols-2">
             <Reveal>
               <ChartCard
@@ -89,6 +114,26 @@ export function FinanceEconomics() {
             </Reveal>
             <Reveal delay={0.12}>
               <ChartCard
+                title="Analyse de rentabilité"
+                subtitle="Chiffre d'affaires vs marge (%)"
+                icon="Landmark"
+                footnote="Illustratif — lecture conjointe du CA et du taux de marge."
+              >
+                <ProfitabilityChart />
+              </ChartCard>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <ChartCard
+                title="Indicateurs économiques"
+                subtitle="Croissance vs inflation"
+                icon="Activity"
+                footnote="Illustratif — exploration data meets economics."
+              >
+                <EconomicIndicatorsChart />
+              </ChartCard>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <ChartCard
                 title="Anomalies détectées"
                 subtitle="Répartition par type"
                 icon="AlertTriangle"
@@ -97,7 +142,7 @@ export function FinanceEconomics() {
                 <AnomaliesChart />
               </ChartCard>
             </Reveal>
-            <Reveal delay={0.16}>
+            <Reveal delay={0.24}>
               <ChartCard
                 title="Automatisation d'un reporting"
                 subtitle="Temps de traitement (base 100)"
