@@ -105,7 +105,7 @@ export function Hero() {
                 className="inline-flex items-center gap-1.5 link-underline hover:text-emerald-600 dark:hover:text-emerald-400"
               >
                 <Icon name="Mail" size={16} />
-                Email
+                {profile.email}
               </a>
               <span className="inline-flex items-center gap-1.5">
                 <Icon name="MapPin" size={16} className="text-emerald-500" />
