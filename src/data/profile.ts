@@ -19,7 +19,7 @@ export const profile = {
   taglineEn: 'Turning financial data into insight, control & decisions.',
 
   // Coordonnées
-  location: 'Nador, Maroc',
+  location: 'Paris, France',
   email: 'chaymae.metaich8@gmail.com',
   linkedin: 'https://www.linkedin.com/in/chaymae-metaich-58a437219',
   github: '', // Optionnel — laisser vide pour masquer le lien GitHub partout sur le site.
