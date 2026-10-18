@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chaymae-metaich.vercel.app/sitemap.xml

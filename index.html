@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0A1A2F" />
+
+    <!-- Primary meta -->
+    <title>Chaymae Metaich — Finance, Data &amp; Contrôle</title>
+    <meta
+      name="description"
+      content="Chaymae Metaich — profil Finance × Data × Contrôle. Analyse financière, contrôle de gestion, reporting, automatisation (Excel/VBA) et data-driven decision making. Étudiante en Programme Grande École, future Mastère Spécialisé ACSI (SKEMA)."
+    />
+    <meta name="author" content="Chaymae Metaich" />
+    <meta
+      name="keywords"
+      content="Chaymae Metaich, finance, contrôle de gestion, analyse financière, data analyst, reporting, audit, économie, statistiques, Excel, VBA, portfolio"
+    />
+    <link rel="canonical" href="https://chaymae-metaich.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chaymae Metaich — Finance, Data &amp; Contrôle" />
+    <meta
+      property="og:description"
+      content="Transformer la donnée financière en analyses, contrôle et décisions. Analyse financière, contrôle de gestion, reporting et automatisation."
+    />
+    <meta property="og:url" content="https://chaymae-metaich.vercel.app/" />
+    <meta property="og:image" content="https://chaymae-metaich.vercel.app/og-image.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Chaymae Metaich" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chaymae Metaich — Finance, Data &amp; Contrôle" />
+    <meta
+      name="twitter:description"
+      content="Transformer la donnée financière en analyses, contrôle et décisions."
+    />
+    <meta name="twitter:image" content="https://chaymae-metaich.vercel.app/og-image.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Avoid theme flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Chaymae Metaich">
+  <rect width="64" height="64" rx="14" fill="#0A1A2F" />
+  <rect x="14" y="36" width="6" height="14" rx="2" fill="#2E527F" />
+  <rect x="24" y="28" width="6" height="22" rx="2" fill="#1C3F6E" />
+  <rect x="34" y="31" width="6" height="19" rx="2" fill="#274F86" />
+  <polyline
+    points="15,32 25,24 35,27 47,15"
+    fill="none"
+    stroke="#10B981"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="47" cy="15" r="4" fill="#34D399" />
+</svg>
