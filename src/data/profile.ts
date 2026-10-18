@@ -46,8 +46,8 @@ export const targetRoles: string[] = [
 
 /** Chiffres clés — faits vérifiables issus du CV (aucune performance inventée). */
 export const heroStats: Stat[] = [
-  { value: '940/990', label: 'TOEIC Anglais', sub: 'Niveau B2+' },
-  { value: '2 ans', label: "Alternance finance", sub: 'Analyste junior' },
+  { value: '940/990', num: 940, suffix: '/990', label: 'TOEIC Anglais', sub: 'Niveau B2+' },
+  { value: '2 ans', num: 2, suffix: ' ans', label: 'Alternance finance', sub: 'Analyste junior' },
   { value: '2022–26', label: 'Programme Grande École', sub: 'Montpellier BS' },
   { value: 'ACSI', label: 'Mastère Spécialisé', sub: 'SKEMA · 2027' },
 ];

@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { heroStats, profile, targetRoles } from '@/data/profile';
+import { CountUp } from '@/components/CountUp';
 import { HeroPortrait } from '@/components/HeroPortrait';
 import { Icon } from '@/components/Icon';
 
@@ -11,8 +12,15 @@ export function Hero() {
       {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <div className="absolute inset-0 grid-bg mask-fade-b opacity-70" />
-        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl dark:bg-emerald-500/10" />
-        <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-cyan-400/15 blur-3xl dark:bg-cyan-500/10" />
+        <div className="absolute -left-24 top-10 h-72 w-72 animate-drift rounded-full bg-emerald-400/20 blur-3xl dark:bg-emerald-500/10" />
+        <div
+          className="absolute right-0 top-40 h-80 w-80 animate-drift rounded-full bg-cyan-400/15 blur-3xl dark:bg-cyan-500/10"
+          style={{ animationDelay: '-7s' }}
+        />
+        <div
+          className="absolute left-1/3 top-72 h-64 w-64 animate-drift rounded-full bg-gold-300/15 blur-3xl dark:bg-gold-400/10"
+          style={{ animationDelay: '-13s' }}
+        />
       </div>
 
       <div className="container">
@@ -44,7 +52,7 @@ export function Hero() {
               <span className="mt-3 block font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-navy-900 dark:text-white sm:text-5xl lg:text-6xl">
                 {profile.headlineLine1}
                 <br />
-                <span className="text-gradient">{profile.headlineLine2}</span>
+                <span className="text-gradient-animate">{profile.headlineLine2}</span>
               </span>
             </motion.h1>
 
@@ -127,7 +135,16 @@ export function Hero() {
           {heroStats.map((s) => (
             <div key={s.label} className="bg-cream px-5 py-5 dark:bg-navy-950">
               <dt className="font-display text-2xl font-bold text-navy-900 dark:text-white sm:text-3xl">
-                {s.value}
+                {s.num != null ? (
+                  <CountUp
+                    to={s.num}
+                    decimals={s.decimals ?? 0}
+                    prefix={s.prefix}
+                    suffix={s.suffix}
+                  />
+                ) : (
+                  s.value
+                )}
               </dt>
               <dd className="mt-1 text-sm font-medium text-navy-700 dark:text-slate-300">
                 {s.label}

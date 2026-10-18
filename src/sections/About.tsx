@@ -44,7 +44,7 @@ export function About() {
           {/* Quick facts */}
           <Reveal delay={0.1} className="space-y-3">
             {quickFacts.map((f) => (
-              <div key={f.label} className="card flex items-start gap-4 p-4">
+              <div key={f.label} className="card card-hover flex items-start gap-4 p-4">
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy-900 text-white dark:bg-emerald-600">
                   <Icon name={f.icon} size={18} />
                 </span>

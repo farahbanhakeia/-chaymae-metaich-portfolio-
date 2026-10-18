@@ -14,6 +14,10 @@ export interface Stat {
   value: string;
   label: string;
   sub?: string;
+  num?: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
 }
 
 export type SkillLevel = 'practiced' | 'studied' | 'notion';

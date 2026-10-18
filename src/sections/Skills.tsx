@@ -42,7 +42,7 @@ export function Skills() {
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {skillCategories.map((cat, i) => (
             <Reveal key={cat.id} delay={Math.min(i * 0.06, 0.3)}>
-              <div className="card h-full p-6">
+              <div className="card card-hover h-full p-6">
                 <div className="flex items-center gap-3">
                   <span className="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white dark:bg-emerald-600">
                     <Icon name={cat.icon} size={20} />

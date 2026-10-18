@@ -1,6 +1,7 @@
 import { BackToTop } from './components/BackToTop';
 import { Footer } from './components/Footer';
 import { LazyFinance } from './components/LazyFinance';
+import { MarketTicker } from './components/MarketTicker';
 import { Navbar } from './components/Navbar';
 import { ScrollProgress } from './components/ScrollProgress';
 import { About } from './sections/About';
@@ -27,6 +28,7 @@ export default function App() {
 
       <main>
         <Hero />
+        <MarketTicker />
         <About />
         <Method />
         <Skills />

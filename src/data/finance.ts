@@ -258,6 +258,25 @@ export const profitabilityData: ProfitabilityPoint[] = [
   { year: '2024', ca: 103, marge: 16 },
 ];
 
+export interface TickerItem {
+  sym: string;
+  val: string;
+  chg: string;
+  up: boolean;
+}
+
+/** Bandeau de marché défilant (ILLUSTRATIF — données de démonstration). */
+export const marketTicker: TickerItem[] = [
+  { sym: 'MASI', val: '13 420', chg: '+1,24 %', up: true },
+  { sym: 'CAC 40', val: '7 612', chg: '+0,48 %', up: true },
+  { sym: 'S&P 500', val: '5 430', chg: '−0,21 %', up: false },
+  { sym: 'EUR / MAD', val: '10,82', chg: '+0,06 %', up: true },
+  { sym: 'EUR / USD', val: '1,086', chg: '−0,12 %', up: false },
+  { sym: 'Brent', val: '82,4 $', chg: '+0,90 %', up: true },
+  { sym: 'Or', val: '2 340 $', chg: '+0,52 %', up: true },
+  { sym: 'DAX', val: '18 240', chg: '+0,33 %', up: true },
+];
+
 export interface EcoPoint {
   year: string;
   croissance: number;
