@@ -108,11 +108,11 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-emerald-500 via-emerald-400 to-cyan-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald-600 via-emerald-500 to-navy-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-animate {
-    background-image: linear-gradient(100deg, #10b981, #22d3ee, #10b981);
+    background-image: linear-gradient(100deg, #0b7a57, #2fae83, #0b7a57);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
